@@ -14,24 +14,9 @@
  * limitations under the License.
  */
 
-package com.github.lwh.nginxparser;
+package com.github.lwh.nginxparser.ngx;
 
-/**
- * Comment. Example:
- * # Bla bla
- */
-public class NgxComment extends NgxAbstractEntry {
 
-    public NgxComment(String comment) {
-        getTokens().add(new NgxToken(comment.substring(1)));
-    }
+public interface NgxEntry {
 
-    @Override
-    public String getValue() {
-        return getName();
-    }
-
-    public String toString() {
-        return "#" + getValue();
-    }
 }

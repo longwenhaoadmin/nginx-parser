@@ -2,6 +2,7 @@ package com.github.lwh.nginxparser.transfer.entry;
 
 import com.github.lwh.nginxparser.transfer.annotation.Param;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * events 实体
@@ -10,6 +11,7 @@ import lombok.Data;
  * @version 1.0, 2021/5/28 22 : 07
  */
 @Data
+@Accessors(chain = true)
 public class NgxEvents {
 
     /**

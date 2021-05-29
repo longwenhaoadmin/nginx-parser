@@ -3,6 +3,7 @@ package com.github.lwh.nginxparser.transfer.entry;
 import com.github.lwh.nginxparser.transfer.annotation.Param;
 import java.util.List;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 /**
  * http block
@@ -11,6 +12,7 @@ import lombok.Data;
  * @version 1.0, 2021/5/28 22 : 33
  */
 @Data
+@Accessors(chain = true)
 public class NgxHttp {
 
     @Param("include")

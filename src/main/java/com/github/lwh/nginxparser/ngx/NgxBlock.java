@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.lwh.nginxparser;
+package com.github.lwh.nginxparser.ngx;
 
 import java.util.ArrayList;
 import java.util.Arrays;

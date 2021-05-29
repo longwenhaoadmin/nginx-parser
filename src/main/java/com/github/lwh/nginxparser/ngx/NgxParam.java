@@ -14,9 +14,20 @@
  * limitations under the License.
  */
 
-package com.github.lwh.nginxparser;
+package com.github.lwh.nginxparser.ngx;
 
+/**
+ * Describes single line parameter. Examples:
+ * user  nginx;
+ * worker_processes  2;
+ */
+public class NgxParam extends NgxAbstractEntry {
 
-public interface NgxEntry {
+    public String toString() {
+        String s = super.toString();
+        if (s.isEmpty())
+            return s;
 
+        return s + ";";
+    }
 }

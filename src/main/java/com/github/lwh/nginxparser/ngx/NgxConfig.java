@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.lwh.nginxparser;
+package com.github.lwh.nginxparser.ngx;
 
 import com.github.lwh.nginxparser.antlr.NginxLexer;
 import com.github.lwh.nginxparser.antlr.NginxListenerImpl;

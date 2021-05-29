@@ -1,6 +1,6 @@
 package com.github.lwh.nginxparser.antlr;
 
-import com.github.lwh.nginxparser.NgxConfig;
+import com.github.lwh.nginxparser.ngx.NgxConfig;
 import org.antlr.v4.runtime.misc.NotNull;
 
 

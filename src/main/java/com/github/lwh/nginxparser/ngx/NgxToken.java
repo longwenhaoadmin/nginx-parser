@@ -14,11 +14,25 @@
  * limitations under the License.
  */
 
-package com.github.lwh.nginxparser;
+package com.github.lwh.nginxparser.ngx;
 
-public class NgxIfBlock extends NgxBlock {
+public class NgxToken {
+    private String token;
 
+    public NgxToken(String token) {
+        this.token = token;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    @Override
     public String toString() {
-        return super.toString(); // TODO: add parentheses (looks like "if $a !~ ^1(2)3$ {" currently)
+        return token;
     }
 }

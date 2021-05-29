@@ -2,12 +2,12 @@
 
     package com.github.lwh.nginxparser.antlr;
 
-import com.github.lwh.nginxparser.NgxBlock;
-import com.github.lwh.nginxparser.NgxComment;
-import com.github.lwh.nginxparser.NgxConfig;
-import com.github.lwh.nginxparser.NgxIfBlock;
-import com.github.lwh.nginxparser.NgxParam;
-import com.github.lwh.nginxparser.NgxToken;
+import com.github.lwh.nginxparser.ngx.NgxBlock;
+import com.github.lwh.nginxparser.ngx.NgxComment;
+import com.github.lwh.nginxparser.ngx.NgxConfig;
+import com.github.lwh.nginxparser.ngx.NgxIfBlock;
+import com.github.lwh.nginxparser.ngx.NgxParam;
+import com.github.lwh.nginxparser.ngx.NgxToken;
 import java.util.ArrayList;
 import java.util.List;
 import org.antlr.v4.runtime.NoViableAltException;

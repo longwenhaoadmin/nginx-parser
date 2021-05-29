@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.github.lwh.nginxparser;
+package com.github.lwh.nginxparser.ngx;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -55,7 +55,6 @@ public abstract class NgxAbstractEntry implements NgxEntry {
     public String getName() {
         if (getTokens().isEmpty())
             return null;
-
         return getTokens().iterator().next().toString();
     }
 

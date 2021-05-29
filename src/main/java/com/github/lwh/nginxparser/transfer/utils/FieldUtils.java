@@ -1,6 +1,7 @@
 package com.github.lwh.nginxparser.transfer.utils;
 
 import cn.hutool.core.util.ObjectUtil;
+import com.github.lwh.nginxparser.transfer.annotation.BlockValue;
 import com.github.lwh.nginxparser.transfer.annotation.Param;
 import java.lang.reflect.Field;
 
@@ -12,14 +13,20 @@ import java.lang.reflect.Field;
  */
 public class FieldUtils {
 
-    public static String getParamNameByField(Field field){
+    public static String getParamNameByField(Field field) {
         if (ObjectUtil.isEmpty(field))
-          return "";
+            return null;
         Param param = field.getAnnotation(Param.class);
-        if(ObjectUtil.isEmpty(param)){
+        if (ObjectUtil.isEmpty(param))
             return field.getName();
-        }
         return param.value();
+    }
+
+    public static Boolean isBlockValueField(Field field) {
+        if (ObjectUtil.isEmpty(field))
+            return false;
+        BlockValue value = field.getAnnotation(BlockValue.class);
+        return value != null;
     }
 
 }
