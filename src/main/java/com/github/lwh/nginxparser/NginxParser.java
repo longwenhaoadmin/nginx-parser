@@ -18,7 +18,17 @@ import java.util.List;
  * @author longwenhao
  * @version 1.0, 2021/5/20 11 : 32
  */
-public class TestNginxParser {
+public class NginxParser {
+
+
+
+    public static String parserObject2Conf(Object o) throws IllegalAccessException {
+        NgxConfig config = new NgxConfig();
+        ConverterBeanFactory.getConverter(o.getClass()).parser2conf(null,config,o);
+        NgxDumper dumper = new NgxDumper(config);
+        return dumper.dump();
+    }
+
 
     public static void main(String[] args) throws IllegalAccessException {
         NgxContent content = new NgxContent();
@@ -33,10 +43,7 @@ public class TestNginxParser {
         content.addHttp(http);
         content.addAttr("haha", "hehe");
         content.addAttr("http", http);
-        NgxConfig block = new NgxConfig();
-        ConverterBeanFactory.getConverter(content.getClass()).parser2conf(null, block, content);
-        NgxDumper dumper = new NgxDumper(block);
-        System.out.println(dumper.dump());
+        System.out.println(parserObject2Conf(content));
     }
 
     /**
