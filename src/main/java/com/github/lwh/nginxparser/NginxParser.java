@@ -21,7 +21,12 @@ import java.util.List;
 public class NginxParser {
 
 
-
+    /**
+     * 程序入口地址
+     * @param o 传入的实体类
+     * @return  nginx.conf配置文件实体类
+     * @throws IllegalAccessException   异常
+     */
     public static String parserObject2Conf(Object o) throws IllegalAccessException {
         NgxConfig config = new NgxConfig();
         ConverterBeanFactory.getConverter(o.getClass()).parser2conf(null,config,o);
